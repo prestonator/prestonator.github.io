@@ -32,9 +32,12 @@ body {
   }
 }
 
-@include mq($from: mobile, $until: desktop) {
+@include mq($until: desktop) {
   .nav__content {
     display: none;
+  }
+  .about-sections__wrap {
+    flex-direction: column;
   }
 }
 

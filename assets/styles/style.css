@@ -58,9 +58,15 @@ body {
   }
 }
 
-@media (min-width: 20em) and (max-width: 61.24em) {
+@media (max-width: 61.24em) {
   .nav__content {
     display: none;
+  }
+  .about-sections__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
