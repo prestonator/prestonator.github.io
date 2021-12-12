@@ -1,0 +1,45 @@
+
+@import './variables.scss';
+
+@mixin flex($default: row) {
+  display: flex;
+  flex-direction: $default;
+}
+
+@mixin main-item-spacing {
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+@mixin align-justify($justify: center, $align: center) {
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin clear-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+// Name your breakpoints in a way that creates a ubiquitous language
+// across team members. It will improve communication between
+// stakeholders, designers, developers, and testers.
+$breakpoints: (
+  mobile: 320px,
+  tablet: 740px,
+  desktop: 1080px,
+  wide: 1300px,
+  // Tweakpoints
+  desktopAd: 810px,
+  mobileLandscape: 480px,
+);
+
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width. For examples: (mobile, tablet, desktop).
+$breakpoints-shown: (mobile, mobileLandscape, tablet, desktop, wide);
+
+@use '../external-sass/node_modules/sass-mq/mq' with (
+  $breakpoints: $breakpoints,
+  $show-breakpoints: $breakpoints-shown,
+);
