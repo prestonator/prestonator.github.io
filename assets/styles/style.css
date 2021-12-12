@@ -11,7 +11,10 @@
   $show-breakpoints: $breakpoints-shown,
 );
 @use "mq";
-.nav__item a {
+.nav__item a,
+.nav__item-has-children a,
+.nav__item-logo a,
+.nav__item-mycase a {
   text-decoration: none;
   color: black;
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -72,18 +75,42 @@ body {
   width: 17vw;
 }
 
-.nav__content .has-children:hover .submenu {
+.nav__content .nav__item-has-children:hover .submenu {
   opacity: 1;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
   background-color: #ffffff;
+  border-top: 2px solid black;
 }
 
-.nav__item {
+.nav__item::after {
+  position: absolute;
+  content: ' ';
+  border-bottom: 1px solid black;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.nav__item:hover::after {
+  top: 0%;
+}
+
+.nav__item,
+.nav__item-has-children,
+.nav__item-logo,
+.nav__item-mycase {
+  padding: 7px 10px;
+  position: relative;
   list-style-type: none;
 }
 
-.nav__item svg {
+.nav__item svg,
+.nav__item-has-children svg,
+.nav__item-logo svg,
+.nav__item-mycase svg {
   position: absolute;
   padding: 3px;
   -webkit-transform: rotate(0deg);
@@ -92,7 +119,7 @@ body {
   transition: all 400ms ease-in-out;
 }
 
-.has-children:hover svg {
+.nav__item-has-children:hover svg {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -100,11 +127,13 @@ body {
 .submenu {
   position: absolute;
   opacity: 0;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   list-style-type: none;
+  padding: 15px;
+  width: 110%;
 }
 
 .cta {
