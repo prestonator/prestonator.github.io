@@ -62,6 +62,7 @@ body {
         background-color: #ffffff;
         border-top: 2px solid black;
         pointer-events: all;
+        visibility: visible;
       }
     }
   }
@@ -109,7 +110,7 @@ body {
 }
 
 .submenu {
-  pointer-events: none;
+  visibility: hidden;
   position: absolute;
   opacity: 0;
   transform: translateY(100%);
