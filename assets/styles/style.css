@@ -375,11 +375,23 @@ body {
   margin-top: 3%;
 }
 
+.about-sections__section--one .btn, .about-sections__section--one .cta__wrap .cta__button, .cta__wrap .about-sections__section--one .cta__button {
+  background-color: white;
+  color: #edbb5f;
+  font-weight: 800;
+}
+
 .about-sections__section--two {
   background-color: #3d3d3d;
   color: white;
   -webkit-box-shadow: 0px 15px 80px -6px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 15px 80px -6px rgba(0, 0, 0, 0.15);
+}
+
+.about-sections__section--two .btn, .about-sections__section--two .cta__wrap .cta__button, .cta__wrap .about-sections__section--two .cta__button {
+  background-color: white;
+  color: #edbb5f;
+  font-weight: 800;
 }
 
 .about-sections__section--three {
@@ -391,5 +403,11 @@ body {
 
 .about-sections__section--three p {
   color: #666;
+}
+
+.about-sections__section--three .btn, .about-sections__section--three .cta__wrap .cta__button, .cta__wrap .about-sections__section--three .cta__button {
+  background-color: #edbb5f;
+  color: white;
+  font-weight: 800;
 }
 /*# sourceMappingURL=style.css.map */

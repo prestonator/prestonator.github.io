@@ -300,11 +300,21 @@ body {
   color: white;
   box-shadow: 0px 15px 80px -6px rgba(0, 0, 0, 0.15);
   margin-top: 3%;
+  .btn {
+    background-color: white;
+    color: #edbb5f;
+    font-weight: 800;
+  }
 }
 .about-sections__section--two {
   background-color: #3d3d3d;
   color: white;
   box-shadow: 0px 15px 80px -6px rgba(0, 0, 0, 0.15);
+  .btn {
+    background-color: white;
+    color: #edbb5f;
+    font-weight: 800;
+  }
 }
 .about-sections__section--three {
   background-color: white;
@@ -312,5 +322,10 @@ body {
   margin-top: 3%;
   p {
     color: #666;
+  }
+  .btn {
+    background-color: #edbb5f;
+    color: white;
+    font-weight: 800;
   }
 }
