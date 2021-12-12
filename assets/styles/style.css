@@ -99,7 +99,7 @@ body {
 }
 
 .cta {
-  background: url(../images/citypath.jpg);
+  background: url(../img/citypath.jpg);
   width: 100%;
   -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45);
           box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45);
