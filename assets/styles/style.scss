@@ -33,6 +33,7 @@ body {
   background-color: #ffffff;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .nav__content {
@@ -58,12 +59,12 @@ body {
 .nav__item {
   &::after {
     position: absolute;
-    content: ' ';
+    content: " ";
     border-bottom: 1px solid black;
     width: 100%;
     left: 0;
     top: 100%;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   &:hover::after {
     top: 0%;
@@ -187,17 +188,16 @@ body {
 }
 
 .promo {
-  width: 80%;
-  max-width: 40vw;
-  margin-right: auto;
-  margin-left: 10vw;
+  position: relative;
 }
 
 .promo__wrap {
   background-color: white;
-  margin-top: -20vw;
+  top: -15vw;
+  width: 45%;
+  margin-left: 8vw;
   text-align: center;
-  float: left;
+  position: absolute;
   .promo__test {
     padding: 10% 5vw;
   }
@@ -222,4 +222,44 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 3vw;
+}
+
+.business-description {
+  background: white;
+  padding-top: 20vw;
+}
+
+.business-description__wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  max-width: 1080px;
+  justify-content: center;
+  margin: 0 auto;
+  h5 {
+    font-family: $bodyFont;
+    letter-spacing: 1px;
+    font-weight: 800;
+    color: #edbb5f;
+    text-transform: uppercase;
+    font-size: 1.4vw;
+    margin-bottom: 1vw;
+  }
+  h3 {
+    font-family: $titleFont;
+    font-weight: 700;
+    font-size: 3vw;
+    margin-top: 0;
+  }
+  hr {
+    border-top: 3px solid #edbb5f;
+    width: 10vw;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+  p {
+    font-family: $bodyFont;
+  }
 }
