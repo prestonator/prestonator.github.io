@@ -428,12 +428,22 @@ body {
 .testimonial__body {
   margin: 0 75px;
 }
+@include mq($from: desktop) {
+  .contact {
+    height: 60vw;
+  }
+}
+
+@include mq($from: tablet, $until: desktop) {
+  .contact {
+    height: 80vw;
+  }
+}
 
 .contact {
   background-color: white;
   position: relative;
   width: 100%;
-  height: 80vw;
 }
 
 .contact__wrap {
