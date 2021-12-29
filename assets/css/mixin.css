@@ -1,0 +1,4 @@
+@use '../external-sass/node_modules/sass-mq/mq' with (
+  $breakpoints: $breakpoints,
+  $show-breakpoints: $breakpoints-shown,
+);
